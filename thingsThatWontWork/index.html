@@ -1,0 +1,93 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>Things That Won't Work</title>
+		<link href="css/styles.css" type="text/css" rel="stylesheet" />
+	</head>
+	<body>
+		<h4 id="testZone">Test Zone Offline</h4>
+		<hr />
+		<div class="baseOffset">
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+			Morbi sit amet laoreet nunc. Curabitur facilisis nibh metus,
+			ac vulputate est pulvinar interdum. Nunc a quam at justo
+			iaculis pellentesque ac vel augue. Suspendisse eget arcu
+			imperdiet, efficitur purus a, pretium purus. Donec nec 
+			congue nisl. Nulla facilisi. Sed id nisi et quam pretium 
+			blandit. Suspendisse potenti. Aenean et mauris purus. 
+			Nulla facilisi.
+			<br />
+			<br />
+			Nam a metus id turpis efficitur laoreet sed a elit. 
+			Sed volutpat risus luctus tincidunt luctus. Pellentesque
+			vehicula lorem eu justo scelerisque, at sollicitudin 
+			mauris laoreet. Interdum et malesuada fames ac ante ipsum
+			primis in faucibus. Ut efficitur dui ex, eget tincidunt
+			tortor tincidunt vel. Praesent porttitor vel justo mattis
+			tincidunt. Etiam imperdiet velit eget dolor interdum, 
+			nec volutpat felis tempus. Mauris feugiat pulvinar porta.
+			<br />
+			<br />
+			Quisque vehicula lectus eget tellus lobortis dapibus. 
+			In hac habitasse platea dictumst. Praesent elit lectus,
+			pulvinar et consectetur at, euismod pretium nunc. Donec
+			sollicitudin ex vel tristique lacinia. Aenean eget ipsum
+			ullamcorper, commodo urna nec, aliquet ligula. Praesent 
+			sit amet pharetra elit. Aliquam tristique congue hendrerit.
+			Nulla porta mi dolor, non blandit urna imperdiet ut. Etiam
+			sit amet velit tincidunt, tristique velit ut, molestie neque.
+			Maecenas nec dolor ac urna ullamcorper elementum. Phasellus
+			eget consequat lorem, non viverra odio. Sed ligula lacus,
+			rutrum quis libero nec, tincidunt fermentum purus. Nullam
+			bibendum et tellus id scelerisque. Proin et felis velit. 
+			Praesent placerat interdum sem, ac volutpat erat convallis 
+			sed.
+			<br />
+			<br />
+			Suspendisse potenti. Praesent non pretium mi. Nulla 
+			consequat et diam consectetur tempus. Phasellus eleifend 
+			nisi vulputate, fermentum nisl at, scelerisque nisl. 
+			Vestibulum sodales tristique dui eu molestie. Aliquam erat
+			volutpat. Donec at volutpat magna, convallis blandit est.
+			Aenean nulla sem, feugiat ultricies libero ut, gravida 
+			scelerisque nulla.
+			<br />
+			<br />
+			Orci varius natoque penatibus et magnis dis parturient 
+			montes, nascetur ridiculus mus. Mauris quis arcu nec mi
+			imperdiet consequat a in dolor. Nullam at pretium est. Ut 
+			ultrices nisi nibh, ac iaculis lacus mattis tristique. Nulla
+			aliquet purus orci, eu fringilla odio porta sed. Nam nec ante
+			sem. Interdum et malesuada fames ac ante ipsum primis in 
+			faucibus. Nunc faucibus, nunc porttitor porttitor hendrerit,
+			nunc orci mollis libero, ac gravida nisl sem ut odio. Ut urna
+			libero, facilisis ac vestibulum in, semper in quam. Suspendisse
+			eget dolor condimentum orci semper tincidunt. Curabitur mollis
+			bibendum massa. Maecenas lobortis, nisi ut vulputate volutpat,
+			sapien odio interdum mauris, quis fermentum ex libero quis enim.
+		</p>
+		</div>
+		<div id="topTriangle"></div>
+		<div id="bottomTriangle"></div>
+	</body>
+	
+	<script>
+			
+			window.addEventListener("scroll", function(){
+				var scrollTop, w = window, d = document;
+				var scrollTop = w.pageYOffset || (d.documentElement || d.body.parentNode || d.body).scrollTop;
+				document.getElementById("testZone").innerHTML = Math.round(scrollTop);
+				if( scrollTop >= 0 && scrollTop < 60){
+					document.getElementById("topTriangle").style.top = (0 - Math.round(scrollTop)) + "px";
+					document.getElementById("topTriangle").style.left = (0 - Math.round(scrollTop)) + "px";
+					document.getElementById("bottomTriangle").style.bottom = (0 - Math.round(scrollTop)) + "px";
+					document.getElementById("bottomTriangle").style.right = (0 - Math.round(scrollTop)) + "px";
+				}
+				else if( scrollTop >= 60){
+				
+				}
+			}, false)
+			
+		</script>
+</html>

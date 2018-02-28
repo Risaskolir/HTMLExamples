@@ -1,0 +1,138 @@
+<!Doctype html>
+<html>
+	<!-- The doctype above tells the browser what version of html or xml it is written in. It MUST be the first thing written in the document with nothing else before it -->
+	<!-- The html tag tells the page that everything inside of it is in html format -->
+	<head>
+		<!-- The head tag controls what is in the WEB PAGE header (not elements within the web page) -->
+		<title> Tables </title>
+		<meta name="description" content="The description meta tag gives a 155 character description of the site (This page is a reference guide for HTML)" />
+		<meta name="keywords" content="tags, separated, by, commas, no, longer, used, for, search, engines, anymore" />
+		<meta name="robots" content="noindex" /> <!-- This part indicates whether the page should be added to search engines.  noindex means no part of the site be included, 
+													  nofollow means that other pages on the website can be included, just not this one.-->
+		<meta http-equiv="author" content="Forrest Townsend" /> <!-- Just shows author's name. -->
+		<meta http-equiv="pragma" content="no-cache" /> <!-- This tells the browser whether or not to cache the information or not, speeding up later visits to the site. -->
+		<!-- The head tag is also where you store the link to the CSS file you want to use, which is encapsulated by the /link/ empty tag.-->
+		<link href="css/styles.css" type="text/css" rel="stylesheet" />
+		
+	</head>
+	
+	<body>	
+		<img id="woodStrip" src="images/woodenStrip.png" alt="A close up of the weathered rings of a stump."/>
+		<p id="top">
+			<table id="tableOfContents">
+					<tr>
+						<th><img id="gearPic" src="images/gear.png" alt="A gear." title="menu logo." width="40" height="40" /></th>
+						<th>Menu</th>
+						<td id="toc1"><a href="QuickRef.html">Text</a></td>					
+						<td id="toc2"><a href="lists.html">Lists</a></td>					
+						<td id="toc3"><a href="links.html">Links</a></td>						
+						<td id="toc4"><a href="images.html">Images</a></td>
+						<td id="toc5" class="currentPage"><a href="tables.html">Tables</a></td>
+						<td id="toc6"><a href="forms.html">Forms</a></td>
+						<td id="toc7"><a href="misc.html">Misc.</a></td>
+					</tr>
+			</table>
+		</p>
+					
+		<h3 id="tables"> How to use tables </h3>
+		<hr />
+		
+		<p>
+			<h5>Steps to creating a  basic table.</h5>
+			<ol>
+				<li> Use the <i>table</i> tag to begin the table. </li>
+				<li> Use the <i>tr</i> (table row) tag to show the start of a new row. </li>
+				<li> Use the <i>th</i> (table heading) tag to indicate that a heading is being used. </li>
+				<li> Use the <i>td</i> (table data) tag to show what each cell has inside. </li>
+				<li> If there is an empty cell, use the th tag with nothing inside. This makes the table easier to read by screen reader and ensures 
+					 that the table will render correctly. </li>
+				<li> (Optional) Create rows or columns that use multiple cells by using the attributes <i>rowspan</i> and <i>colspan</i>, respectively. </li>
+			</ol>
+			
+			<table>
+				<tr>
+					<th></th>
+					<th>Color</th>
+					<th>Texture</th>
+					<th>Taste</th>
+				</tr>
+				<tr>
+					<th class="foodTable">Tomato</th>
+					<td class="foodTable">Red</td>
+					<td class="foodTable">Smooth</td>
+					<td class="foodTable" rowspan ="3">Good</td>
+				</tr>
+				<tr>
+					<th class="foodTable">Potato</th>
+					<td class="foodTable">Brown</td>
+					<td class="foodTable">Rough</td>
+					<!-- There is one less element here and in the row below because of the rowspan used above. -->
+				</tr>
+				<tr>
+					<th class="foodTable">Corn</th>
+					<td class="foodTable">Yellow</td>
+					<td class="foodTable">Bumpy</td>
+				<tr>
+			</table>
+		</p>
+		<p>
+			<h5>Steps to creating a long table.</h5>
+			
+			<ol>
+				<li> Use the table tag like before to start the table. </li>
+				<li> Use the <i>thead</i> tag to create the header. Use a single tr tag with th tags inside to create this. </li>
+				<li> Use the <i>tbody</i> tag to start the rest of the table and then populate it with tr,th, and td tags like normal. </li>
+				<li> (Optional) Use the <i>tfoot</i> tag to plate a footer in the table. It will by default look like the rest of the table which 
+					 can be changed by using CSS. </li>
+			</ol>
+		
+		<table>
+			<thead>
+				<tr>
+					<th>Number</th>
+					<th>Letter</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>3</td>
+					<td>c</td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td>f</td>
+				</tr>
+				<tr>
+					<td>9</td>
+					<td>i</td>
+				</tr>
+				
+				<tr>
+					<td>12</td>
+					<td>l</td>
+				</tr>
+				<tr>
+					<td>15</td>
+					<td>o</td>
+				</tr>
+				<tr>
+					<td>18</td>
+					<td>r</td>
+				</tr>
+				<tr>
+					<td>21</td>
+					<td>u</td>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td>x</td>
+				</tr>
+			</tbody>
+		</table>
+		</p>
+		
+		<hr />
+		
+	</body>
+</html>
+		

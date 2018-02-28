@@ -1,0 +1,64 @@
+<!Doctype html>
+<html>
+	<!-- The doctype above tells the browser what version of html or xml it is written in. It MUST be the first thing written in the document with nothing else before it -->
+	<!-- The html tag tells the page that everything inside of it is in html format -->
+	<head>
+		<!-- The head tag controls what is in the WEB PAGE header (not elements within the web page) -->
+		<title> Links </title>
+		<meta name="description" content="The description meta tag gives a 155 character description of the site (This page is a reference guide for HTML)" />
+		<meta name="keywords" content="tags, separated, by, commas, no, longer, used, for, search, engines, anymore" />
+		<meta name="robots" content="noindex" /> <!-- This part indicates whether the page should be added to search engines.  noindex means no part of the site be included, 
+													  nofollow means that other pages on the website can be included, just not this one.-->
+		<meta http-equiv="author" content="Forrest Townsend" /> <!-- Just shows author's name. -->
+		<meta http-equiv="pragma" content="no-cache" /> <!-- This tells the browser whether or not to cache the information or not, speeding up later visits to the site. -->
+		<!-- The head tag is also where you store the link to the CSS file you want to use, which is encapsulated by the /link/ empty tag.-->
+		<link href="css/styles.css" type="text/css" rel="stylesheet" />
+		
+	</head>
+	
+	<body>	
+		<img id="woodStrip" src="images/woodenStrip.png" alt="A close up of the weathered rings of a stump."/>
+		<p id="top">
+			<table id="tableOfContents">
+					<tr>
+						<th><img id="gearPic" src="images/gear.png" alt="A gear." title="menu logo." width="40" height="40" /></th>
+						<th>Menu</th>
+						<td id="toc1"><a href="QuickRef.html">Text</a></td>					
+						<td id="toc2"><a href="lists.html">Lists</a></td>					
+						<td id="toc3" class="currentPage"><a href="links.html">Links</a></td>						
+						<td id="toc4"><a href="images.html">Images</a></td>
+						<td id="toc5"><a href="tables.html">Tables</a></td>
+						<td id="toc6"><a href="forms.html">Forms</a></td>
+						<td id="toc7"><a href="misc.html">Misc.</a></td>
+					</tr>
+			</table>
+			
+		</p>
+		
+		<h3 id="links"> How to use links and directory navigations</h3>
+		<hr />
+		
+		
+		<p> You can create links using the <i>"a"</i> tag.  Setting the link requires you to use the <i>href</i> attribute. 
+			For example: href= "xyz.com".  By using an absolute URL, you can link to another site.  If you use relative URLs, 
+			you just need to specify the file location of the link.  You can move around the file structure using: 
+			<ul>
+				<li> Use the exact filename if the file you are running is in the same folder as the one you are linking to. </li>
+				<li> if you need to access a file in a child folder, put the name of the file followed by a forward slash and then the filename. </li>
+				<li> To go up a file use ../ to before the filename to indicate moving up.  You can add more ../s to continue to climb up the file tree. </li>
+				<li> The main file (or homepage) of each folder in a directory is called index.html. This is so if no name is specified in a link, it can us this instead.  </li>
+				<li> You can have the link activate an email interface by using href="mailto:xyy@pnq.com" </li>
+				<li> Open a link in a new window or tab by adding the attribute target to the link and using the variable "_blank".</li>
+				<li> You can link to different parts of the same page by adding an <i>id</i> attribute to any element on the page. 
+					 Then use #idName to link to it in the href attribute. </li>
+			</ul>
+			
+		The following is a test of a <a href="testlink.html">link</a> using the above method. <br />
+		The following is a test of a <a href="testlink.html" target="_blank">new tab link</a> using the above method. <br />
+		The following is a test of a <a href="#top">link to the top</a> of the page.
+		</p>
+			
+		<hr />
+	</body>
+
+</html>

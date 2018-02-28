@@ -1,0 +1,98 @@
+
+<html>
+	<head>
+		<title>Form Examples</title>
+		<link href="css/styles.css" type="text/css" rel="stylesheet" />
+	</head>
+	<body>
+		<p> Below is the code for several types of forms.  Tutorials have been omitted for the sake of brevity. <br />
+			Some buttons lead to broken pages. The code is correct, the URL is just no longer in use.
+			<h3>Simple text inputs</h3>
+			
+			<hr />
+			
+			<form action="http://www.example.com/login.php">
+				<p> Text Box:
+					<input type="text" name="username" maxlength="24" />
+				</p>
+			</form>
+			
+			<form action="http://www.example.com/login.php">
+				<p> Concealed Text Box:
+					<input type="password" name="password" maxlength="16" />
+				</p>
+			</form>
+			
+			<h3>Buttons and multi-option forms</h3>
+			<hr />
+			
+			<form action="http://www.example.com/profile.php">
+				<p> Checkboxes:
+					<input type="checkbox" name="cBox" value="1" checked="checked"/> 1
+					<input type="checkbox" name="cBox" value="2"/> 2
+					<input type="checkbox" name="cBox" value="3"/> 3
+				</p>
+			</form>
+			
+			<form action="http://www.example.com/profile.php">
+				<p> Radio Buttons:
+					<input type="radio" name="rButtons" value="1" checked="checked"/> 1
+					<input type="radio" name="rButtons" value="2"/> 2
+					<input type="radio" name="rButtons" value="3"/> 3
+				</p>
+			</form>
+			
+			<form action="http://www.example.com/add.php">
+				<button alt="add" width="10" height="10" >Button</button>
+				<input type="hidden" name="button" value="Button" />
+			</form>
+			
+			<form action="http://www.example.com/profile.php">
+				<p>Dropdown List</p>
+				<select name="options">
+					<option value="option1" selected="selected">Option 1</option>
+					<option value="option2">Option 2</option>
+					<option value="option3">Option 3</option>
+				</select>
+			</form>
+			
+			<form action="http://www.example.com/profile.php">
+				<p>Select List. Hold down ctrl or command to select multiple.</p>
+				<select name="options" size="3" multiple="multiple">
+					<option value="option1" selected="selected">Option 1</option>
+					<option value="option2">Option 2</option>
+					<option value="option3">Option 3</option>
+				</select>
+			</form>	
+			
+			<h3>Advanced forms and Text Areas</h3>
+			<hr />
+			
+			<form action="http://www.example.com/upload.php" method="post">
+				<p> File Upload Box: </p>
+				<input type="file" name="fileUpload" value="3"/> <br />
+				<input type="submit" value="Upload"/> Don't click this it leads to a 404 error.
+			</form>
+			
+			<!-- This search code only works with HTML5, so it may not work with some browsers-->
+			<form action="http://www.example.com/search.php">
+				<p> Search: </p>
+				<input type="search" name="search" placeholder="Placeholder Text" />
+				<input type="submit" value="Search" /> Don't click this one either.
+			</form>
+			
+			<form action="http://www.example.com/subscribe.php">
+				<p> Subscription Email Submission </p>
+				<input type="text" name="email"/>
+				<input type="submit" name="subscribe" value="Subscribe" /> Don't click this one either.
+			</form>		
+			
+			<form action="http://www.example.com/comments.php">
+				<p> Text Area </p>
+					<textarea name="textarea" cols="20" rows="4" /> Type here... </textarea>
+			</form>
+		</p>
+		<hr />
+	</body>
+</html>
+		

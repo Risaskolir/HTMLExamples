@@ -1,0 +1,114 @@
+<!Doctype html>
+<html>
+	
+	<!-- The doctype above tells the browser what version of html or xml it is written in. It MUST be the first thing written in the document with nothing else before it -->
+	<!-- The html tag tells the page that everything inside of it is in html format -->
+	<head>
+		<!-- The head tag controls what is in the WEB PAGE header (not elements within the web page) -->
+		<title> This is the title, made with the title tag </title>
+		<meta name="description" content="The description meta tag gives a 155 character description of the site (This page is a reference guide for HTML)" />
+		<meta name="keywords" content="tags, separated, by, commas, no, longer, used, for, search, engines, anymore" />
+		<meta name="robots" content="noindex" /> <!-- This part indicates whether the page should be added to search engines.  noindex means no part of the site be included, 
+													  nofollow means that other pages on the website can be included, just not this one.-->
+		<meta http-equiv="author" content="Forrest Townsend" /> <!-- Just shows author's name. -->
+		<meta http-equiv="pragma" content="no-cache" /> <!-- This tells the browser whether or not to cache the information or not, speeding up later visits to the site. -->
+		<!-- The head tag is also where you store the link to the CSS file you want to use, which is encapsulated by the /link/ empty tag.-->
+		<link href="css/styles.css" type="text/css" rel="stylesheet" />
+		
+	</head>
+	
+	
+	<body>	
+	
+		<div id="GearHeader">
+			<div id="tocTriangle"></div>
+				<div id="gearDivTop">
+					<img id="gearPic" src="images/gearWhite.png" alt="A gear." title="menu logo." width="40" height="40" />
+				</div>
+				<div id="gearDivBottom">
+					<img id="gearPic2" src="images/gearWhite.png" alt="A gear." title="menu logo." width="35" height="35" />
+				</div>
+		</div>
+		<!-- The body tag controls everything you see on the main screen-->
+		<img id="woodStrip" src="images/woodenStrip.png" alt="A close up of the weathered rings of a stump." style="width: 100%;"/>
+		<p id="top">
+			
+			<table id="tableOfContents">
+					<tr>
+						<th id="menu">Menu</th>
+						<td id="toc1" class="currentPage"><a href="QuickRef.html">Text</a></td>					
+						<td id="toc2"><a href="lists.html">Lists</a></td>					
+						<td id="toc3"><a href="links.html">Links</a></td>						
+						<td id="toc4"><a href="images.html">Images</a></td>
+						<td id="toc5"><a href="tables.html">Tables</a></td>
+						<td id="toc6"><a href="forms.html">Forms</a></td>
+						<td id="toc7"><a href="misc.html">Misc.</a></td>
+					</tr>
+			</table>
+		</p>
+		
+		
+		<h3 id="text"> How to manipulate text </h3>
+		
+		<hr /> <!-- You can use the empty tag hr to create a line or some other denotation that separates two pieces of the web page -->
+		
+		<h1> The h1 tag makes the largest header you can have. </h1>
+		
+		<h6> The h6 tag makes the smallest header you can have. </h6>
+		
+		<p> This is a paragraph of text, created with the p tag.</p>
+		
+		<p> When two or more paragraphs are together, they have a space between them. </p>
+		
+		<p> Additionally, you can <b> bold </b> and <i> italicize </i> words by using the <i>b</i> and <i>i</i> tags respectively. 
+			Line breaks are done using the <i>br</i> empty tag, and you can add <sup> supertext </sup> and <sub> subtext </sub> by using
+			the <i>sup</i> and <i>sub</i> tags.
+		</p>
+			
+		<p> You can also make things more organized and easier to use screenreaders with by using some of the following tags. <br />
+			<br />
+			You can use the <strong> <i>STRONG</i> TAG </strong> to denote importance to the words. By default this makes the words bold 
+			but it can also make a screenreader say it louder or with more force. <br /> <br />
+			You can use the <em> em tag </em> to denote emphasis on the words.  By default this italicizes the words. but it can also 
+			make screenreaders add an inflection to the words as well. <br /> <br />
+			There is also the <q><i>q</i> tag </q> which is supposed to add quotation marks around the word, but it does not on IE so people
+			don't use it often.
+		</p>
+		
+		<blockquote>
+			<p> Block quotes are done  using the <i>blockquote</i> tag, with a paragraph tag inside of it.  It usually indents text on the screen, 
+				but if you just want to indent a piece of text, you should usually do this using CSS.  You can additionally add
+				a source to a block quote by using the <i>cite</i> attribute, which is followed by a URL to tell the user where the info came from. 
+			</p>
+		</blockquote>
+		
+		<p> You can also show how changes have been made by using the <del><i>del</i></del> tag, which stands for deleted and strikes through
+			the word, and the <ins><i>ins</i></ins> tag, which stands for inserted and underlines the word. You can strike through a <s>word</s>
+			without denoting a deletion by using the <i>s</i> tag, and can you can underline a <u>word</u> using the <i>u</i> tag, though the latter is 
+			being phased out. 
+		</p>
+				
+		<hr />
+		
+		<script>						
+			//This function adds an event that moves the "under construction" logo on the screen based on how far the user has scrolled down.		
+			window.addEventListener("scroll", function(){
+				var scrollTop, w = window, d = document;
+				var scrollTop = w.pageYOffset || (d.documentElement || d.body.parentNode || d.body).scrollTop;
+				if( scrollTop >= 0 && scrollTop < 60){
+					document.getElementById("tocTriangle").style.top = (60 - Math.round(scrollTop)) + "px";
+					document.getElementById("gearDivTop").style.left = (0 - Math.round(scrollTop/2)) + "px";
+					document.getElementById("gearDivBottom").style.left = (0 - Math.round(scrollTop/2)) + "px";
+					document.getElementById("gearDivTop").style.top= (60 - Math.round(scrollTop/4)) + "px";
+					document.getElementById("gearDivBottom").style.top = (60 - Math.round(scrollTop/4)) + "px";
+				}else if( scrollTop >= 60){
+					document.getElementById("tocTriangle").style.top = -0 + "px";
+					document.getElementById("gearDivTop").style.left = -30 + "px";
+					document.getElementById("gearDivBottom").style.left = -30 + "px";
+					document.getElementById("gearDivTop").style.top= 45 + "px";
+					document.getElementById("gearDivBottom").style.top = 45 + "px";
+				}
+			}, false)
+		</script>
+	</body>
+</html>

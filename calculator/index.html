@@ -1,0 +1,120 @@
+<!Doctype html>
+<html>
+
+	<head>
+		<title>Calculator</title>
+		<link href="css/styles.css" type="text/css" rel="stylesheet" />
+	</head>
+	
+	<body>
+		<p>
+			Welcome to the calculator, I sure hope it works!
+		</p>
+		<table id="calc">
+			<tr><th id="calcOut" colspan="4">Enter Value</th></tr>
+			<tr>
+				<td onclick="addToString('7')" class="numButton" id="button7">7</td>
+				<td onclick="addToString('8')" class="numButton" id="button8">8</td>
+				<td onclick="addToString('9')" class="numButton" id="button9">9</td>
+				<td onclick="addOperator('/')" class="button" id="buttonDiv">/</td>
+			</tr>
+			<tr>
+				<td onclick="addToString('4')" class="numButton" id="button4">4</td>
+				<td onclick="addToString('5')" class="numButton" id="button5">5</td>
+				<td onclick="addToString('6')" class="numButton" id="button6">6</td>
+				<td onclick="addOperator('*')" class="button" id="buttonMult">*</td>
+			</tr>
+			<tr>
+				<td onclick="addToString('1')" class="numButton" id="button1">1</td>
+				<td onclick="addToString('2')" class="numButton" id="button2">2</td>
+				<td onclick="addToString('3')" class="numButton" id="button3">3</td>
+				<td onclick="addOperator('-')" class="button" id="buttonSub">-</td>
+			</tr>
+			<tr>
+				<td onclick="flipSign()"class="button" id="buttonSFlip">+/-</td>
+				<td onclick="addToString('0')" class="numButton" id="button0">0</td>
+				<td onclick="addToString('.')" class="button" id="buttonDec">.</td>
+				<td onclick="addOperator('+')" class="button" id="buttonAdd">+</td>
+			</tr>
+			<tr>
+				<td onclick="clearString()" id="buttonClear" colspan="2">C</td>
+				<td onclick="equate()"id="buttonEq" colspan="2">=</td>
+			</tr>
+		</table>
+		
+		<script>
+			var calcString = "";
+			var prevNum = "";
+			var operator = "";
+			var isNewEq = true;
+			
+			function addToString(str){
+				if(isNewEq !== false && calcString.length <= 15){
+					if(str !== "."){
+					calcString = calcString + str;
+					setOut();
+					}
+					else if (str === "." && calcString.indexOf(".") === -1){
+						calcString = calcString + str;
+						setOut();
+					}
+				}
+			}
+			function addOperator(oper){
+				if(operator === "" && (calcString !== "" || isNewEq === false) && calcString !== "."){
+					operator = oper;
+					if(isNewEq === true){
+					prevNum = calcString;}
+					calcString = "";
+					isNewEq = true;
+					setOut();
+				}
+				else if (operator !== "" && calcString === "" && calcString !== "."){
+					operator = oper;
+					isNewEq = true;
+					setOut();
+				}
+			}
+			function setOut(){
+				document.getElementById("calcOut").innerHTML = prevNum + 
+					" " + operator + " " + calcString;
+			}
+			function clearString(){
+				document.getElementById("calcOut").innerHTML = "Enter Value";
+				calcString = "";
+				operator = "";
+				prevNum = "";
+				isNewEq = true;
+			}
+			function flipSign(){
+				if(calcString !== ""){
+					calcString = calcString * -1;
+					setOut();
+				}
+			}
+			function equate(){
+				var num1, num2, equated;
+				if(calcString !== "" && operator !== "" && prevNum !== "" && calcString !== "."){
+					num1 = Math.round(+prevNum * 1000000) / 1000000;
+					num2 = Math.round(+calcString * 1000000) / 1000000;
+					if(operator === "/"){
+						equated = +num1 / +num2;
+					}
+					else if(operator === "*"){
+						equated = +num1 * +num2;
+					}
+					else if(operator === "-"){
+						equated = +num1 - +num2;
+					}
+					else if(operator === "+"){
+						equated = +num1 + +num2;
+					}
+					calcString = "";
+					operator = "";
+					prevNum = equated;
+					isNewEq = false;
+					setOut();
+				}
+			}
+		</script>
+</html>

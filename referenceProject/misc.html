@@ -1,0 +1,93 @@
+<!Doctype html>
+<html>
+	<!-- The doctype above tells the browser what version of html or xml it is written in. It MUST be the first thing written in the document with nothing else before it -->
+	<!-- The html tag tells the page that everything inside of it is in html format -->
+	<head>
+		<!-- The head tag controls what is in the WEB PAGE header (not elements within the web page) -->
+		<title> Misc. </title>
+		<meta name="description" content="The description meta tag gives a 155 character description of the site (This page is a reference guide for HTML)" />
+		<meta name="keywords" content="tags, separated, by, commas, no, longer, used, for, search, engines, anymore" />
+		<meta name="robots" content="noindex" /> <!-- This part indicates whether the page should be added to search engines.  noindex means no part of the site be included, 
+													  nofollow means that other pages on the website can be included, just not this one.-->
+		<meta http-equiv="author" content="Forrest Townsend" /> <!-- Just shows author's name. -->
+		<meta http-equiv="pragma" content="no-cache" /> <!-- This tells the browser whether or not to cache the information or not, speeding up later visits to the site. -->
+		<!-- The head tag is also where you store the link to the CSS file you want to use, which is encapsulated by the /link/ empty tag.-->
+		<link href="css/styles.css" type="text/css" rel="stylesheet" />
+		
+	</head>
+	
+	<body>	
+		<img id="woodStrip" src="images/woodenStrip.png" alt="A close up of the weathered rings of a stump."/>
+		<p id="top">
+			<table id="tableOfContents">
+					<tr>
+						<th id ="tocI"><img id="gearPic" src="images/gear.png" alt="A gear." title="menu logo." width="40" height="40" /></th>
+						<th>Menu</th>
+						<td id="toc1"><a href="QuickRef.html">Text</a></td>					
+						<td id="toc2"><a href="lists.html">Lists</a></td>					
+						<td id="toc3"><a href="links.html">Links</a></td>						
+						<td id="toc4"><a href="images.html">Images</a></td>
+						<td id="toc5"><a href="tables.html">Tables</a></td>
+						<td id="toc6"><a href="forms.html">Forms</a></td>
+						<td id="toc7" class="currentPage"><a href="misc.html">Misc.</a></td>
+					</tr>
+			</table>
+		</p>
+		<h3 id="misc"> Miscellaneous Information </h3>
+		<hr />
+		<p>
+			You can add the <i>id</i> attribute to almost any tag to make it easier to find using CSS. This allows you to style the 
+			element differently than others. <br />
+			You can also add the <i>class</i> attribute to any element to make it easier to find. The difference is that you can use 
+			the same values for class to group them together.  This way you can edit their look in CSS without having to id them all 
+			separately.<br />
+			The <i>div</i> (division) tag can be used to group things together as well, but the elements must be connected. Div is not inline, 
+			so use the <i>span</i> tag if you want to capture a small piece of an inline element. <br />
+			The <i>iframe</i> (inline frame) element can be used to embed things into the website, like Google Maps. <br />
+			<br />
+			Example:<br />
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53663.86280037041!2d-79
+			.97726493493202!3d32.792486639538225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0
+			%3A0xd482bd96599ae81d!2sMUSC+Institute+of+Psychiatry!5e0!3m2!1sen!2sus!4v1517422246813" 
+			width="600" height="450" frameborder="0" style="border:0"></iframe>
+		</p>
+			
+		<p> 
+			The <i>meta</i> empty tag, which should only be placed in the header tag, gives information and allows you to change some 
+			settings for the website. The meta tag is used at the top of this HTML file. <br />
+			<br />
+			Because some characters are reserved for use in HTML code, you might need to use special codes to access them. Below is a table 
+			with some of the most common codes. <br />
+		</p>
+		
+		<table>
+			<thead>
+				<tr>
+					<th>Symbol</th>
+					<th>Code</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>&lt;</td>
+					<td>&amp;lt</td>
+				</tr>
+				<tr>
+					<td>&gt;</td>
+					<td>&amp;gt</td>
+				</tr>
+				<tr>
+					<td>&amp;</td>
+					<td>&amp;amp</td>
+				</tr>
+				<tr>
+					<td>&quot;</td>
+					<td>&amp;quot</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<hr />
+	</body>
+</html>
+		

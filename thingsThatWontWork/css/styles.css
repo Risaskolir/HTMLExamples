@@ -1,0 +1,44 @@
+p {
+	font-size: 20pt;
+}
+
+.baseOffset{
+	margin-left: 20%;
+	margin-right: 20%;
+}
+
+body {
+	background-color: #000000;
+	color: #ffffff;
+}
+
+hr {
+	border-color: #ffffff;
+	background-color: #ffffff;
+}
+
+#topTriangle {
+	position:fixed;
+	top: 0px;
+	left:0px;
+	display: inline-block;
+	border-bottom: 100px solid transparent;
+	border-right: 100px solid transparent;
+	border-top: 100px solid  #ffffff;
+	border-left: 100px solid  #ffffff;
+}
+
+#bottomTriangle {
+	position:fixed;
+	bottom:0px;
+	right:0px;
+	display: inline-block;
+	border-top: 100px solid transparent;
+	border-left: 100px solid transparent;
+	border-bottom: 100px solid  #ffffff;
+	border-right: 100px solid  #ffffff;
+}
+
+#testZone {
+	text-align: center;
+}
